@@ -1,5 +1,5 @@
 # Data Files
-WELFake_Dataset.csv
+data/raw/WELFake_Dataset.csv
 data/processed/*.h5
 
 # Byte-compiled / optimized / DLL files

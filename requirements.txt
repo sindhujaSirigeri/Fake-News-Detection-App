@@ -1,5 +1,3 @@
-# For installation instructions, please refer to the README.md file.
-
 absl-py==2.1.0
 asttokens==2.4.1
 astunparse==1.6.3
@@ -87,4 +85,5 @@ unicodedata2 @ file:///D:/bld/unicodedata2_1695848155043/work
 urllib3==2.2.2
 wcwidth==0.2.13
 Werkzeug==3.0.3
+wordcloud @ file:///D:/bld/wordcloud_1710887196857/work
 wrapt==1.16.0

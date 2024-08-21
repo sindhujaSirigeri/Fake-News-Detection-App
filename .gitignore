@@ -146,3 +146,4 @@ cython_debug/
 
 # PyCharm
 #.idea/
+fake-news-predictor/data/processed/*.h5

@@ -16,6 +16,7 @@ flake8==7.1.1
 flatbuffers==24.3.25
 fonttools @ file:///D:/bld/fonttools_1720359163792/work
 gast==0.6.0
+gensim @ file:///D:/bld/gensim_1707360498028/work
 google-pasta==0.2.0
 grpcio==1.65.5
 h5py==3.11.0
@@ -73,6 +74,7 @@ scipy @ file:///C:/bld/scipy-split_1723854932738/work/dist/scipy-1.14.0-cp310-cp
 seaborn @ file:///home/conda/feedstock_root/build_artifacts/seaborn-split_1714494649443/work
 shiboken6==6.7.2
 six @ file:///home/conda/feedstock_root/build_artifacts/six_1620240208055/work
+smart_open @ file:///home/conda/feedstock_root/build_artifacts/smart_open_split_1711455333245/work/dist
 stack-data==0.6.3
 statsmodels @ file:///D:/bld/statsmodels_1715941409651/work
 tables @ file:///D:/bld/pytables_1724161164810/work
@@ -93,4 +95,4 @@ urllib3==2.2.2
 wcwidth==0.2.13
 Werkzeug==3.0.3
 wordcloud @ file:///D:/bld/wordcloud_1710887196857/work
-wrapt==1.16.0
+wrapt @ file:///D:/bld/wrapt_1699532932803/work

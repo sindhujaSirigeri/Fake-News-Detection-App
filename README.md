@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/da942a9d-6844-43cb-9b98-675e04a04a9e)# Fake News Predictor
+# Fake News Predictor
 
 ## Project Overview
 

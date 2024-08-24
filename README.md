@@ -1,4 +1,4 @@
-# Fake News Predictor
+![image](https://github.com/user-attachments/assets/da942a9d-6844-43cb-9b98-675e04a04a9e)# Fake News Predictor
 
 ## Project Overview
 
@@ -42,4 +42,131 @@ You can access the dataset on Kaggle via this [link](https://www.kaggle.com/data
     - Install all the dependencies using the requirements.txt file:
     ```bash
     pip install -r requirements.txt
+
+## Project Process
+
+The following process was followed in research, development, testing and deployment of the project.1. 
+1. Data & Methodology Research 
+2. Data Preprocessing
+3. Tokenization and Padding
+4. Exploratory Data Analysis (EDA)
+5. Vectorization 
+6. Feature Engineering
+7. Model Selection and Modelling
+8. Model Optimisation
+9. Deployment on Streamlit
+10. Project Reporting & Presentation
+
+### Data & Methodology Research 
+
+At the begining of the project, research was conducted to find datasets suitable for the project. The criteria included, selecting datasets with enough data records and datasets that has a near 50/50 samples of both fake and real data records. 
+
+### Data Preprocessing
+
+This was identified as a crucial step as the dataset required cleaning and processing prior to being transformed for data modeling. The following were followed:
+* Dropping unnecessary columns
+* Handling missing values
+* Removing stopwords, numerics, special characters etc.
+* Lemmitization (Lemmatisation helps reduce words to their base form (e.g., "running" to "run"). NLTK’s WordNetLemmatizer is used for this.)
+* Case Folding (Lowercasing)
+
+### Tokenization and Padding
+
+The next step was to tokenise the text and pad the sequences. Tokenisation converts text into sequences of integers where each integer corresponds to a specific word in the text. Padding ensures that all sequences have the same length, which is necessary for feeding the data into most machine learning models.
+
+![cumalitive](https://github.com/user-attachments/assets/365f489b-1e0c-42ea-8149-f375f6c694b1)
+
+
+![distribution](https://github.com/user-attachments/assets/37d6c5ca-d382-4fed-b089-2cf585e20ac4)
+
+
+### Exploratory Data Analysis (EDA)
+
+Exploratory Data Analysis (EDA) is the process of analysing and investigating the dataset to understand its characteristics better, most of the time, visualizing. This is beforehand so that we can use the dataset for our final purpose, in this case for machine learning modeling.
+
+1. Class Distribution Analysis
+
+![class distribution analysis](https://github.com/user-attachments/assets/61d9c427-ed97-4cb4-b747-9e14ffdc8e2f)
+
+
+
+2. Text Length Distribution
+
+![text length distribution](https://github.com/user-attachments/assets/5662ea7e-3a1c-4dda-8902-129dff236055)
+
+Given the skewness of the data, particularly in the distribution of text lengths, there are a few strategies one might consider to improve one's model outcomes. Here are some recommendations:
+
+* Truncate Long Sequences: Extremely long sequences may introduce noise or overwhelm your model, especially if they are outliers. Consider truncating sequences that are longer than a certain threshold (e.g., the 95th or 99th percentile of text length). You've already padded sequences to a maximum length, so this step might involve ensuring that your max sequence length is appropriate.
+* Handling Short Sequences: Very short sequences might not provide enough information for the model to make accurate predictions. You can consider filtering out sequences that are too short, or alternatively, use techniques like padding to handle them appropriately.
+* Apply Data Augmentation: If the skewness is related to a class imbalance (e.g., more real news than fake news), you might want to apply data augmentation techniques. This could include oversampling the minority class or using synthetic data generation techniques like SMOTE.
+* Normalisation or Standardisation: For numerical features (e.g., text_length), normalisation or standardisation can help mitigate the impact of skewness. However, since you are working primarily with text data, this might be more applicable to secondary features you might engineer from the text.
+* Use Robust Models: Some models are more robust to skewed data than others. For example, tree-based models like Random Forest or Gradient Boosting can handle skewed data better. Alternatively, you could explore models that specifically account for skewness.
+* Balancing the Dataset: If the skewness is related to an imbalance in the labels (e.g., more fake news than real news), you can balance the dataset by undersampling the majority class or oversampling the minority class. However, this needs to be done carefully to avoid overfitting, especially when oversampling.
+* Use Log Transformation: If the skewness is extreme, consider applying a log transformation to reduce the impact of outliers. However, this is generally more applicable to continuous numerical features rather than text lengths.
+
+  
+3. Word Cloud
+
+![Word Cloud](https://github.com/user-attachments/assets/20254260-9efe-4c3d-b21b-3ed58f784220)
+
+
+4. Most Common Words
+
+The following were found as the most common fake and real words.
+
+Most common words in fake news: [('said', 184625), ('trump', 90859), ('mr', 66097), ('would', 62656), ('president', 51066), ('new', 50062), ('us', 48582), ('state', 47122), ('year', 46200), ('one', 43608)]
+Most common words in real news: [('trump', 105582), ('people', 48821), ('said', 47143), ('one', 46036), ('would', 43146), ('clinton', 41855), ('president', 37794), ('us', 36470), ('hillary', 32281), ('like', 32276)]
+
+
+5. Check for Duplicate Entries
+
+8456 rows were identified as duplicate entries.
+   
+6. Correlation Analysis
+
+![Text length vs Labels](https://github.com/user-attachments/assets/17ef2f23-8a26-4cc8-81b0-687e89ae5637)
+
+
+7. Visualizing Data Distribution
+
+![Text Length Distibution by Label](https://github.com/user-attachments/assets/6ac75dcf-858d-483c-80d3-d36df7e510cb)
+
+
+8. Transformation
+
+![Transformation](https://github.com/user-attachments/assets/c4db8ff8-8ec7-4034-a453-220770af0b41)
+
+
+
+### Vectorization
+
+Vectorization is the process in which you convert raw data, in this case text, in to vectors of real numbers so that it produce a feature extraction so that a machine learning model can be trained.
+
+In this project we experiemented with Word2Vec, pre-trained model by Google and TF-IDF technique which is a refinement over the simple bag-of-words model, by allowing the weight of words to depend on the rest of the corpus. For the implementation TF-IDF technique was selected.
+
+
+### Feature Engineering
+
+In this step we have combined the vectors and inspected the combined matrix, before splitting the data into train and test sets.
+
+![Comparision of log_text_length Distribution](https://github.com/user-attachments/assets/4fa89948-e2d8-4c78-a5da-2e4c6b3fde9a)
+
+
+### Model Selection and Modelling
+
+Research was conducted initially, to understand which modeling technique would be ideal for this purpose. Logistical Regression Model and Decision Tree Model was selected for fitting the data sets.
+
+Further research was included to be used for enhancing this solution for furture. <Include recommendations here>
+
+
+
+
+
+
+
+
+
+
+
+    
     

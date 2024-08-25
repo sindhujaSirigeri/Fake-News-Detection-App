@@ -1,0 +1,1 @@
+{"accuracy": 0.9415, "precision": 0.944177093358999, "recall": 0.9432692307692307, "f1_score": 0.9437229437229437, "best_params": {"C": 100, "penalty": "l2", "solver": "liblinear"}, "best_cross_val_score": 0.9443999999999999}

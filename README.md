@@ -204,9 +204,14 @@ In this step we have combined the vectors and inspected the combined matrix, bef
 
 ### Model Selection and Modelling
 
-Research was conducted initially, to understand which modeling technique would be ideal for this purpose. Logistical Regression Model and Decision Tree Model was selected for fitting the data sets.
+Research was conducted initially, to understand which modeling technique would be ideal for this purpose. Logistical Regression Model, Decision Tree Model, KNN, SVM and Random Forest models were fitting  with the dataset. The best performing model was Logistical Regression Model at 94%, hence was selected for the final optimization and deployment.
 
 Further research was included to be used for enhancing this solution for furture. <Include recommendations here>
+
+
+## Deployment
+
+For deployment of the model and for user interactions with the model Streamlit.io (https://streamlit.io/) was used.
 
 
 

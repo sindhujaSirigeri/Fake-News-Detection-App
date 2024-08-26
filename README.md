@@ -31,6 +31,18 @@ The dataset was published in the following paper:
 
 You can access the dataset on Kaggle via this [link](https://www.kaggle.com/datasets/saurabhshahane/fake-news-classification).
 
+## Repository Structure
+- /data/splits/: Contains the train_test_split.h5 file.
+- /models/: Stores all trained model files (.pkl) and corresponding metrics (.json).
+- /notebooks/: Jupyter notebooks detailing the preprocessing, model training, and evaluation steps.
+- README.md: Overview of the project, including a step-by-step process.
+
+## Conclusion
+The project successfully trained and optimised multiple models for fake news detection, ready for integration into a Streamlit app. Detailed documentation and best practices ensure that the models can be deployed efficiently and effectively.
+
+
+################################################################################################################################################
+
 
 ## Installation
 
@@ -58,7 +70,7 @@ Preprocessing involved:
 - Lemmatisation to reduce words to their base form.
 - Case folding to ensure uniformity.
 
-3. Tokenisation and Padding
+3. **Tokenisation and Padding**
 The text was tokenised and padded to ensure consistent sequence lengths, necessary for feeding the data into machine learning models.
 
 4. **Exploratory Data Analysis (EDA)**
@@ -84,9 +96,6 @@ The following models were explored:
 - **K-Nearest Neighbors (KNN)**: Implemented with optimized hyperparameters.
 
 8. **Model Optimisation**
-Optimisation was performed through hyperparameter tuning and dimensionality reduction:
-- **GridSearchCV**: Used for finding the best parameters.
-- **Incremental PCA**: Applied to reduce dimensions while retaining variance.
 
 9. **Deployment on Streamlit**
 The project is prepared for deployment on Streamlit, with considerations for handling large datasets and real-time user input preprocessing.
@@ -94,17 +103,7 @@ The project is prepared for deployment on Streamlit, with considerations for han
 10. **Project Reporting & Presentation**
 Final reporting includes a detailed README.md file and a presentation summarising the project process, findings, and outcomes.
 
-## Repository Structure
-- /data/splits/: Contains the train_test_split.h5 file.
-- /models/: Stores all trained model files (.pkl) and corresponding metrics (.json).
-- /notebooks/: Jupyter notebooks detailing the preprocessing, model training, and evaluation steps.
-- README.md: Overview of the project, including a step-by-step process.
 
-## Conclusion
-The project successfully trained and optimised multiple models for fake news detection, ready for integration into a Streamlit app. Detailed documentation and best practices ensure that the models can be deployed efficiently and effectively.
-
-
-##########################################Markdown below needs to be integrated into the structure above.
 ### Data & Methodology Research 
 
 At the begining of the project, research was conducted to find datasets suitable for the project. The criteria included, selecting datasets with enough data records and datasets that has a near 50/50 samples of both fake and real data records. 
@@ -202,9 +201,25 @@ In this step we have combined the vectors and inspected the combined matrix, bef
 
 ### Model Selection and Modelling
 
-Research was conducted initially, to understand which modeling technique would be ideal for this purpose. Logistical Regression Model and Decision Tree Model was selected for fitting the data sets.
+Research was conducted initially, to understand which modeling technique would be ideal for this purpose. Logistical Regression Model, Decision Tree Model, KNN, SVM and Random Forest models were fitting  with the dataset. The best performing model was Logistical Regression Model at 94%, hence was selected for the final optimization and deployment.
+
+![Accuracy Comparison ](https://github.com/user-attachments/assets/caa08888-6a96-4e4b-8389-a8851ed876af)
+
 
 Further research was included to be used for enhancing this solution for furture. <Include recommendations here>
+
+
+
+## Model Optimization
+
+Optimisation was performed through hyperparameter tuning and dimensionality reduction:
+- **GridSearchCV**: Used for finding the best parameters.
+- **Incremental PCA**: Applied to reduce dimensions while retaining variance.
+
+
+## Deployment
+
+For deployment of the model and for user interactions with the model Streamlit.io (https://streamlit.io/) was used.
 
 
 

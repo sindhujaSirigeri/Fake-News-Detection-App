@@ -96,9 +96,6 @@ The following models were explored:
 - **K-Nearest Neighbors (KNN)**: Implemented with optimized hyperparameters.
 
 8. **Model Optimisation**
-Optimisation was performed through hyperparameter tuning and dimensionality reduction:
-- **GridSearchCV**: Used for finding the best parameters.
-- **Incremental PCA**: Applied to reduce dimensions while retaining variance.
 
 9. **Deployment on Streamlit**
 The project is prepared for deployment on Streamlit, with considerations for handling large datasets and real-time user input preprocessing.
@@ -211,6 +208,13 @@ Research was conducted initially, to understand which modeling technique would b
 
 Further research was included to be used for enhancing this solution for furture. <Include recommendations here>
 
+
+
+## Model Optimization
+
+Optimisation was performed through hyperparameter tuning and dimensionality reduction:
+- **GridSearchCV**: Used for finding the best parameters.
+- **Incremental PCA**: Applied to reduce dimensions while retaining variance.
 
 
 ## Deployment

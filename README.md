@@ -31,6 +31,18 @@ The dataset was published in the following paper:
 
 You can access the dataset on Kaggle via this [link](https://www.kaggle.com/datasets/saurabhshahane/fake-news-classification).
 
+## Repository Structure
+- /data/splits/: Contains the train_test_split.h5 file.
+- /models/: Stores all trained model files (.pkl) and corresponding metrics (.json).
+- /notebooks/: Jupyter notebooks detailing the preprocessing, model training, and evaluation steps.
+- README.md: Overview of the project, including a step-by-step process.
+
+## Conclusion
+The project successfully trained and optimised multiple models for fake news detection, ready for integration into a Streamlit app. Detailed documentation and best practices ensure that the models can be deployed efficiently and effectively.
+
+
+################################################################################################################################################
+
 
 ## Installation
 
@@ -94,17 +106,7 @@ The project is prepared for deployment on Streamlit, with considerations for han
 10. **Project Reporting & Presentation**
 Final reporting includes a detailed README.md file and a presentation summarising the project process, findings, and outcomes.
 
-## Repository Structure
-- /data/splits/: Contains the train_test_split.h5 file.
-- /models/: Stores all trained model files (.pkl) and corresponding metrics (.json).
-- /notebooks/: Jupyter notebooks detailing the preprocessing, model training, and evaluation steps.
-- README.md: Overview of the project, including a step-by-step process.
 
-## Conclusion
-The project successfully trained and optimised multiple models for fake news detection, ready for integration into a Streamlit app. Detailed documentation and best practices ensure that the models can be deployed efficiently and effectively.
-
-
-##########################################Markdown below needs to be integrated into the structure above.
 ### Data & Methodology Research 
 
 At the begining of the project, research was conducted to find datasets suitable for the project. The criteria included, selecting datasets with enough data records and datasets that has a near 50/50 samples of both fake and real data records. 

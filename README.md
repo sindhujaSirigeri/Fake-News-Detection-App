@@ -2,9 +2,11 @@
 
 ## Project Overview
 
-This project aims to build a Fake News Predictor using various machine learning techniques. The model is trained on datasets of news articles, labeled as fake or real, and includes preprocessing steps such as text cleaning, tokenisation, and vectorisation.
+This project aims to build a Fake News Predictor using various machine learning techniques. The model is trained on a dataset of news articles labeled as fake or real and includes preprocessing steps such as text cleaning, tokenisation, and vectorisation. The project explores multiple models, including Logistic Regression, Decision Tree, Random Forest, Support Vector Machine (SVM), and K-Nearest Neighbors (KNN).
 
 ## Data
+
+### Dataset
 
 This project uses the **WELFake** dataset, which is designed for fake news classification. The dataset consists of 72,134 news articles, with 35,028 labeled as real news and 37,106 labeled as fake news. The data was sourced from four popular news datasets—Kaggle, McIntire, Reuters, and BuzzFeed Political—to provide a diverse set of text data and to prevent overfitting in machine learning models.
 
@@ -45,18 +47,64 @@ You can access the dataset on Kaggle via this [link](https://www.kaggle.com/data
 
 ## Project Process
 
-The following process was followed in research, development, testing and deployment of the project.1. 
-1. Data & Methodology Research 
-2. Data Preprocessing
-3. Tokenization and Padding
-4. Exploratory Data Analysis (EDA)
-5. Vectorization 
-6. Feature Engineering
-7. Model Selection and Modelling
-8. Model Optimisation
-9. Deployment on Streamlit
-10. Project Reporting & Presentation
+1. **Data & Methodology Research**
+Research was conducted to find a suitable dataset for the project. The WELFake dataset was selected due to its balanced representation of real and fake news articles.
 
+2. **Data Preprocessing**
+Preprocessing involved:
+- Dropping unnecessary columns.
+- Handling missing values.
+- Removing stopwords, numerics, and special characters.
+- Lemmatisation to reduce words to their base form.
+- Case folding to ensure uniformity.
+
+3. Tokenisation and Padding
+The text was tokenised and padded to ensure consistent sequence lengths, necessary for feeding the data into machine learning models.
+
+4. **Exploratory Data Analysis (EDA)**
+EDA involved:
+- **Class Distribution Analysis**: Understanding the balance between fake and real news.
+- **Text Length Distribution**: Analysing the distribution of text lengths.
+- **Word Cloud**: Visualising the most common words.
+- **Correlation Analysis**: Exploring the relationship between text length and labels.
+- **Handling Skewness**: Addressed the skewness in the data with strategies like truncation, balancing, and robust models.
+
+5. **Vectorisation**
+Experimented with Word2Vec and TF-IDF techniques, with TF-IDF being selected for the final implementation.
+
+6. **Feature Engineering**
+Combined the vectors and inspected the matrix before splitting the data into training and testing sets.
+
+7. **Model Selection and Modelling**
+The following models were explored:
+- **Logistic Regression**: Optimized using GridSearchCV.
+- **Decision Tree**: Tuned for specific hyperparameters.
+- **Random Forest**: Applied Incremental PCA (IPCA) for dimensionality reduction.
+- **Support Vector Machine (SVM)**: Detailed recommendations were provided for handling its computational intensity.
+- **K-Nearest Neighbors (KNN)**: Implemented with optimized hyperparameters.
+
+8. **Model Optimisation**
+Optimisation was performed through hyperparameter tuning and dimensionality reduction:
+- **GridSearchCV**: Used for finding the best parameters.
+- **Incremental PCA**: Applied to reduce dimensions while retaining variance.
+
+9. **Deployment on Streamlit**
+The project is prepared for deployment on Streamlit, with considerations for handling large datasets and real-time user input preprocessing.
+
+10. **Project Reporting & Presentation**
+Final reporting includes a detailed README.md file and a presentation summarising the project process, findings, and outcomes.
+
+## Repository Structure
+- /data/splits/: Contains the train_test_split.h5 file.
+- /models/: Stores all trained model files (.pkl) and corresponding metrics (.json).
+- /notebooks/: Jupyter notebooks detailing the preprocessing, model training, and evaluation steps.
+- README.md: Overview of the project, including a step-by-step process.
+
+## Conclusion
+The project successfully trained and optimised multiple models for fake news detection, ready for integration into a Streamlit app. Detailed documentation and best practices ensure that the models can be deployed efficiently and effectively.
+
+
+##########################################Markdown below needs to be integrated into the structure above.
 ### Data & Methodology Research 
 
 At the begining of the project, research was conducted to find datasets suitable for the project. The criteria included, selecting datasets with enough data records and datasets that has a near 50/50 samples of both fake and real data records. 

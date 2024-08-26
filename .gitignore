@@ -4,6 +4,7 @@ fake-news-predictor/data/processed/*.h5
 fake-news-predictor/data/raw/archive (3).zip
 fake-news-predictor/data/splits/*.h5
 fake-news-predictor/data/vectorised/*.h5
+fake-news-predictor/models/svm_model.pkl
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -206,6 +206,9 @@ In this step we have combined the vectors and inspected the combined matrix, bef
 
 Research was conducted initially, to understand which modeling technique would be ideal for this purpose. Logistical Regression Model, Decision Tree Model, KNN, SVM and Random Forest models were fitting  with the dataset. The best performing model was Logistical Regression Model at 94%, hence was selected for the final optimization and deployment.
 
+![Accuracy Comparison ](https://github.com/user-attachments/assets/caa08888-6a96-4e4b-8389-a8851ed876af)
+
+
 Further research was included to be used for enhancing this solution for furture. <Include recommendations here>
 
 

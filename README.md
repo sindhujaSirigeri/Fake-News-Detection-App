@@ -70,7 +70,7 @@ Preprocessing involved:
 - Lemmatisation to reduce words to their base form.
 - Case folding to ensure uniformity.
 
-3. Tokenisation and Padding
+3. **Tokenisation and Padding**
 The text was tokenised and padded to ensure consistent sequence lengths, necessary for feeding the data into machine learning models.
 
 4. **Exploratory Data Analysis (EDA)**

@@ -126,11 +126,15 @@ if st.button("Predict"):
         # Make prediction
         prediction = model.predict(processed_input)
 
-        # Interpret the prediction
+        # Interpret the prediction and display styled output
         if prediction[0] == 0:
-            st.success("The model predicts this is likely **Fake News**.")
+            st.markdown("<div style='padding:10px; border-radius:5px; background-color:#FFCCCC; color:#900000;'>"
+                        "The model predicts this is likely <strong>Fake News</strong>.</div>",
+                        unsafe_allow_html=True)
         else:
-            st.success("The model predicts this is likely **Real News**.")
+            st.markdown("<div style='padding:10px; border-radius:5px; background-color:#CCFFCC; color:#006600;'>"
+                        "The model predicts this is likely <strong>Real News</strong>.</div>",
+                        unsafe_allow_html=True)
 
 st.header("Understanding the Output")
 st.write("""

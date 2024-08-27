@@ -64,31 +64,23 @@ def preprocess_input(title, text):
     # Step 5: Lowercase before lemmatization
     cleaned_text = cleaned_text.lower()
 
-    # Step 6: Lemmatization with debug
+    # Step 6: Lemmatization
     def lemmatize_text(text):
-        lemmatized_text = ' '.join([lemmatizer.lemmatize(word) for word in text.split()])
-        st.write(f"Lemmatization - original: {text}, lemmatized: {lemmatized_text}")
-        return lemmatized_text
+        return ' '.join([lemmatizer.lemmatize(word) for word in text.split()])
 
     lemmatized_text = lemmatize_text(cleaned_text)
 
     # Step 7: Vectorization
     vectorized_input = vectorizer.transform([lemmatized_text])
-    st.write(f"Vectorized Input Shape: {vectorized_input.shape}")
-    
-    # New Step: Check Original Lengths and Log Transformation
-    original_length = len(lemmatized_text.split())  # Count words in the text
-    log_transformed_length = np.log1p(original_length)
-    st.write(f"Original Length: {original_length}")
-    st.write(f"Log-Transformed Length: {log_transformed_length}")
     
     # Step 8: Combine vectorized input with additional features
+    original_length = len(lemmatized_text.split())  # Count words in the text
+    log_transformed_length = np.log1p(original_length)
     additional_features = np.array([[log_transformed_length]])
     combined_input = np.hstack([vectorized_input.toarray(), additional_features])
 
     # Step 9: Scaling
     scaled_input = scaler.transform(combined_input)
-    st.write(f"Scaled Input Shape: {scaled_input.shape}")
 
     return scaled_input
 

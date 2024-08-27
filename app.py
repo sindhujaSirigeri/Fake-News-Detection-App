@@ -44,8 +44,10 @@ st.write("""
 """)
 
 # Side panel with data information
-st.sidebar.header("Dataset Information")
-st.sidebar.write("Dataset from Kaggle: [Fake News Classification](https://www.kaggle.com/datasets/saurabhshahane/fake-news-classification)")
+st.sidebar.header("About This Project")
+st.sidebar.write("""
+This app uses Natural Language Processing (NLP) and Machine Learning to classify news articles as fake or real. The model was trained on a large dataset of news articles and aims to help users discern the credibility of online content.
+""")
 
 st.sidebar.header("Model Performance")
 st.sidebar.write("""
@@ -55,6 +57,12 @@ The model used for predictions has the following performance metrics:
 - **Recall:** 90%
 """)
 
+st.sidebar.header("Dataset Information")
+st.sidebar.write("This project uses the WELFake dataset, which is designed for fake news classification. The dataset consists of 72,134 news articles, with 35,028 labeled as real news and 37,106 labeled as fake news. The data was sourced from four popular news datasets—Kaggle, McIntire, Reuters, and BuzzFeed Political—to provide a diverse set of text data and to prevent overfitting in machine learning models.")
+st.sidebar.write("Dataset from Kaggle: [Fake News Classification](https://www.kaggle.com/datasets/saurabhshahane/fake-news-classification)")
+st.sidebar.write("The dataset was published in the following paper:
+
+-   **IEEE Transactions on Computational Social Systems**: pp. 1-13 (doi:  [10.1109/TCSS.2021.3068519](https://doi.org/10.1109/TCSS.2021.3068519)).")
 
 # Define the preprocess_input function
 def preprocess_input(title, text):

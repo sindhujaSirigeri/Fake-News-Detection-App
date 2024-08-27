@@ -36,6 +36,10 @@ model = joblib.load(model_path)
 # Title of the app
 st.title("Fake News Classification using Machine Learning")
 
+# Side panel with data information
+st.sidebar.header("Dataset Information")
+st.sidebar.write("Dataset from Kaggle: [Fake News Classification](https://www.kaggle.com/datasets/saurabhshahane/fake-news-classification)")
+
 # Define the preprocess_input function
 def preprocess_input(title, text):
     # Step 1: Handle missing title

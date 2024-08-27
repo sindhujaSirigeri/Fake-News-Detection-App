@@ -62,6 +62,9 @@ st.sidebar.write("This project uses the WELFake dataset, which is designed for f
 st.sidebar.write("Dataset from Kaggle: [Fake News Classification](https://www.kaggle.com/datasets/saurabhshahane/fake-news-classification)")
 st.sidebar.write("The dataset was published in the following paper:\n- **IEEE Transactions on Computational Social Systems**: pp. 1-13 (doi: [10.1109/TCSS.2021.3068519](https://doi.org/10.1109/TCSS.2021.3068519)).")
 
+st.sidebar.header("Project Repository")
+st.sidebar.write("The GitHub repository with all the code and details on this project can be found at:\n- [Project-4](https://github.com/Whereiswendy/Project-4)\n- [Fake_vs_fact_Predictor](https://github.com/sindhujaSirigeri/Fake_vs_fact_Predictor)")
+
 # Define the preprocess_input function
 def preprocess_input(title, text):
     # Step 1: Handle missing title

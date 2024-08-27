@@ -38,7 +38,7 @@ st.title("Fake News Classification using Machine Learning")
 
 st.header("How to Use This App")
 st.write("""
-- **Step 1:** Enter the title of the news article in the provided text box.
+- **Step 1:** Enter the title of the news article in the provided text box. This step is optional.
 - **Step 2:** Paste or type the body of the news article into the text area below.
 - **Step 3:** Click on the **Predict** button to see whether the article is likely to be classified as Fake or Real News.
 """)

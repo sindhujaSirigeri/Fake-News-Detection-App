@@ -1,0 +1,1 @@
+{"accuracy": 0.957417296622512, "precision": 0.9568374344493747, "recall": 0.9604535024969632, "f1_score": 0.9586420584669271, "cross_val_mean_accuracy": 0.9544352095503825, "cross_val_std_accuracy": 0.002739592106828175}

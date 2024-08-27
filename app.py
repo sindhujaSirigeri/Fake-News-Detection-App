@@ -21,16 +21,16 @@ lemmatizer = WordNetLemmatizer()
 stop_words = set(stopwords.words('english'))
 
 # Load tokeniser, TF-IDF vectoriser, scaler, and model
-with open('data/processed/tokenizer.pkl', 'rb') as f:
+with open('fake-news-predictor/data/processed/tokenizer.pkl', 'rb') as f:
     tokenizer = pickle.load(f)
 
-with open('data/processed/tfidf_vectorizer.pkl', 'rb') as f:
+with open('fake-news-predictor/data/processed/tfidf_vectorizer.pkl', 'rb') as f:
     vectorizer = pickle.load(f)
 
-with open('data/splits/scaler.pkl', 'rb') as f:
+with open('fake-news-predictor/data/splits/scaler.pkl', 'rb') as f:
     scaler = pickle.load(f)
 
-model_path = 'models/logistic_regression_model.pkl'
+model_path = 'fake-news-predictor/models/logistic_regression_model.pkl'
 model = joblib.load(model_path)
 
 # Title of the app

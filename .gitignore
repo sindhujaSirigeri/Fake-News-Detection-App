@@ -7,6 +7,8 @@ fake-news-predictor/data/vectorised/*.h5
 fake-news-predictor/models/svm_model.pkl
 fake-news-predictor/data/splits/train_test_split.zip
 
+.streamlit/secrets.toml
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

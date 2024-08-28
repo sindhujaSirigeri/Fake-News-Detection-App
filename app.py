@@ -51,10 +51,11 @@ This app uses Natural Language Processing (NLP) and Machine Learning to classify
 
 st.sidebar.header("Model Performance")
 st.sidebar.write("""
-The model used for predictions has the following performance metrics:
+The model(logistic regression) used for predictions has the highest performance metrics which are as follows:
 - **Accuracy:** 95%
 - **Precision:** 92%
-- **Recall:** 90%
+- **Recall:** 96%
+- **f1 score:** 95%
 """)
 
 st.sidebar.header("Dataset Information")

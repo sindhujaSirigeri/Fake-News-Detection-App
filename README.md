@@ -97,11 +97,11 @@ Combined the vectors and inspected the matrix before splitting the data into tra
 
 7. **Model Selection and Modelling**
 The following models were explored:
-- **Logistic Regression**: Optimized using GridSearchCV.
-- **Decision Tree**: Tuned for specific hyperparameters.
-- **Random Forest**: Applied Incremental PCA (IPCA) for dimensionality reduction.
-- **Support Vector Machine (SVM)**: Detailed recommendations were provided for handling its computational intensity.
-- **K-Nearest Neighbors (KNN)**: Implemented with optimized hyperparameters.
+    - **Logistic Regression**: Optimized using GridSearchCV.
+    - **Decision Tree**: Tuned for specific hyperparameters.
+    - **Random Forest**: Applied Incremental PCA (IPCA) for dimensionality reduction.
+    - **Support Vector Machine (SVM)**: Detailed recommendations were provided for handling its computational intensity.
+    - **K-Nearest Neighbors (KNN)**: Implemented with optimized hyperparameters.
 
 8. **Model Optimisation**
 

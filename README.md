@@ -1,7 +1,7 @@
 # Fake News Predictor
 
 ### Collaborators: 
-Sindhuja Sirigeri, Tammy Powell, Wendy Ware, Uthpalie Thilakaratna-Attygalle
+Sindhuja Sirigeri, Tammy Powell, [Wendy Ware](https://github.com/Whereiswendy), Uthpalie Thilakaratna-Attygalle
 
 ----------------------------------------------------------------------------
 
@@ -209,14 +209,19 @@ In this step we have combined the vectors and inspected the combined matrix, bef
 
 ### Model Selection and Modelling
 
-Research was conducted initially, to understand which modeling technique would be ideal for this purpose. Logistical Regression Model, Decision Tree Model, KNN, SVM and Random Forest models were fitting  with the dataset. The best performing model was Logistical Regression Model at 94%, hence was selected for the final optimization and deployment.
+Research was conducted initially, to understand which modeling technique would be ideal for this purpose. 
+1. Logistical Regression Model
+2. Decision Tree Model
+3. KNN
+4. SVM
+5. Random Forest models
+
+The best performing model was Logistical Regression Model at 94%, hence was selected for the final optimization and deployment.
 
 ![Accuracy Comparison ](https://github.com/user-attachments/assets/caa08888-6a96-4e4b-8389-a8851ed876af)
 
 
 Further research was included to be used for enhancing this solution for furture. <Include recommendations here>
-
-
 
 ## Model Optimization
 

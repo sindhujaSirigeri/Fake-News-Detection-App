@@ -72,22 +72,22 @@ Research was conducted to find a suitable dataset for the project. The WELFake d
 
 2. **Data Preprocessing**
 Preprocessing involved:
-- Dropping unnecessary columns.
-- Handling missing values.
-- Removing stopwords, numerics, and special characters.
-- Lemmatisation to reduce words to their base form.
-- Case folding to ensure uniformity.
+    - Dropping unnecessary columns.
+    - Handling missing values.
+    - Removing stopwords, numerics, and special characters.
+    - Lemmatisation to reduce words to their base form.
+    - Case folding to ensure uniformity.
 
 3. **Tokenisation and Padding**
 The text was tokenised and padded to ensure consistent sequence lengths, necessary for feeding the data into machine learning models.
 
 4. **Exploratory Data Analysis (EDA)**
 EDA involved:
-- **Class Distribution Analysis**: Understanding the balance between fake and real news.
-- **Text Length Distribution**: Analysing the distribution of text lengths.
-- **Word Cloud**: Visualising the most common words.
-- **Correlation Analysis**: Exploring the relationship between text length and labels.
-- **Handling Skewness**: Addressed the skewness in the data with strategies like truncation, balancing, and robust models.
+    - **Class Distribution Analysis**: Understanding the balance between fake and real news.
+    - **Text Length Distribution**: Analysing the distribution of text lengths.
+    - **Word Cloud**: Visualising the most common words.
+    - **Correlation Analysis**: Exploring the relationship between text length and labels.
+    - **Handling Skewness**: Addressed the skewness in the data with strategies like truncation, balancing, and robust models.
 
 5. **Vectorisation**
 Experimented with Word2Vec and TF-IDF techniques, with TF-IDF being selected for the final implementation.
@@ -119,11 +119,11 @@ At the begining of the project, research was conducted to find datasets suitable
 ### Data Preprocessing
 
 This was identified as a crucial step as the dataset required cleaning and processing prior to being transformed for data modeling. The following were followed:
-* Dropping unnecessary columns
-* Handling missing values
-* Removing stopwords, numerics, special characters etc.
-* Lemmitization (Lemmatisation helps reduce words to their base form (e.g., "running" to "run"). NLTK’s WordNetLemmatizer is used for this.)
-* Case Folding (Lowercasing)
+    * Dropping unnecessary columns
+    * Handling missing values
+    * Removing stopwords, numerics, special characters etc.
+    * Lemmitization (Lemmatisation helps reduce words to their base form (e.g., "running" to "run"). NLTK’s WordNetLemmatizer is used for this.)
+    * Case Folding (Lowercasing)
 
 ### Tokenization and Padding
 

@@ -126,14 +126,9 @@ if st.button("Predict"):
         # Process user input
         processed_input = preprocess_input(title, text)
 
-        # Make prediction and calculate confidence
+        # Make prediction 
         prediction = model.predict(processed_input)
-        prediction_proba = model.predict_proba(processed_input)
-
-        # Get the confidence of the prediction
-        confidence = np.max(prediction_proba) * 100  # Convert to percentage
-        st.write("Prediction confidence:", confidence)
-        
+            
         
  # Interpret the prediction
         if prediction[0] == 0:
